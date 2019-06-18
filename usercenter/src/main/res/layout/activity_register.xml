@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.RegisterActivity">
+    <!--logo-->
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="#FF43ddFF"
+                    android:layout_height="200dp">
+
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_height="60dp">
+            <ImageView android:layout_width="64dp"
+                       android:src="@drawable/ic_assignment_ind_black_24dp"
+                       android:layout_height="64dp"/>
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/id_ed_reg_account"
+                      android:hint="请输入手机号/邮箱"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_height="60dp">
+            <ImageView android:layout_width="64dp"
+                       android:src="@drawable/ic_filter_tilt_shift_black_24dp"
+                       android:layout_height="64dp"/>
+            <EditText android:layout_width="match_parent"
+                      android:hint="请输入密码"
+                      android:id="@+id/id_ed_reg_pass"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+            <Button android:layout_width="match_parent"
+                    android:id="@+id/id_login_submit"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="注册"
+                    android:layout_marginRight="50dp"
+                    android:layout_height="48dp"/>
+            <RadioButton android:layout_width="wrap_content"
+                         android:id="@+id/checkbox"
+                         android:text="同意注册协议"
+                         android:textSize="16sp"
+                         android:textColor="#004D40"
+                         android:checked="false"
+                         android:layout_below="@id/id_login_submit"
+                         android:layout_alignLeft="@id/id_login_submit"
+                         android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_alignRight="@id/id_login_submit"
+                      android:layout_below="@id/id_login_submit"
+                      android:textColor="#00B8D4"
+                      android:text="阅读注册协议"
+                      android:layout_alignTop="@id/checkbox"
+                      android:layout_alignBottom="@id/checkbox"
+                      android:textSize="16sp"
+                      android:gravity="center"
+                      android:layout_height="24dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
