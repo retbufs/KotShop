@@ -6,10 +6,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.RegisterActivity">
+        tools:context=".ui.activity.RegisterActivity">
     <!--logo-->
     <RelativeLayout android:layout_width="match_parent"
-                    android:background="#FF43ddFF"
+                    android:background="#0288D1"
                     android:layout_height="200dp">
 
     </RelativeLayout>
@@ -39,13 +39,32 @@
                        android:layout_height="64dp"/>
             <EditText android:layout_width="match_parent"
                       android:hint="请输入密码"
-                      android:id="@+id/id_ed_reg_pass"
+                      android:id="@+id/id_ed_pass"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_height="60dp">
+            <ImageView android:layout_width="64dp"
+                       android:src="@drawable/ic_filter_tilt_shift_black_24dp"
+                       android:layout_height="64dp"/>
+            <EditText android:layout_width="0dp"
+                      android:layout_weight="3"
+                      android:hint="验证码"
+                      android:id="@+id/id_ed_code"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="130dp"
+                      android:id="@+id/id_tv_sendCode"
+                      android:gravity="center"
+                      android:text="获取验证码"
                       android:layout_height="match_parent"/>
         </LinearLayout>
         <RelativeLayout android:layout_width="match_parent"
                         android:layout_height="match_parent">
             <Button android:layout_width="match_parent"
-                    android:id="@+id/id_login_submit"
+                    android:id="@+id/id_register_submit"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="50dp"
                     android:text="注册"
@@ -57,12 +76,12 @@
                          android:textSize="16sp"
                          android:textColor="#004D40"
                          android:checked="false"
-                         android:layout_below="@id/id_login_submit"
-                         android:layout_alignLeft="@id/id_login_submit"
+                         android:layout_below="@id/id_register_submit"
+                         android:layout_alignLeft="@id/id_register_submit"
                          android:layout_height="wrap_content"/>
             <TextView android:layout_width="wrap_content"
-                      android:layout_alignRight="@id/id_login_submit"
-                      android:layout_below="@id/id_login_submit"
+                      android:layout_alignRight="@id/id_register_submit"
+                      android:layout_below="@id/id_register_submit"
                       android:textColor="#00B8D4"
                       android:text="阅读注册协议"
                       android:layout_alignTop="@id/checkbox"

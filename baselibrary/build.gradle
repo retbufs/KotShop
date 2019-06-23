@@ -10,9 +10,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -22,42 +20,50 @@ android {
         }
     }
 
-}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
+
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    api "org.jetbrains.anko:anko:$anko_version"
+    api 'androidx.appcompat:appcompat:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-// Room components
-//    implementation "androidx.room:room-runtime:$roomVersion"
-//    implementation "androidx.room:room-ktx:$roomVersion"
-//    kapt "androidx.room:room-compiler:$roomVersion"
-//    androidTestImplementation "androidx.room:room-testing:$roomVersion"
-//
-//// Lifecycle components
-//    implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
-//    kapt "androidx.lifecycle:lifecycle-compiler:$archLifecyclVersion"
-//    androidTestImplementation "androidx.arch.core:core-testing:$androidxArchVersion"
-//
-//// ViewModel Kotlin support
-//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
-//
-//// Coroutines
-//    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
-//    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
-//
 
+    //RxJava相关
+    api 'io.reactivex.rxjava2:rxjava:2.2.9'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    //implementation 'com.squareup.okhttp3:mockwebserver:3.14.2'
+    //网络请求库
+    api "com.squareup.okhttp3:okhttp:$okhttp_version"
+    api "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    api "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    api "com.squareup.retrofit2:retrofit:$retrofit_version"
+   // implementation "com.squareup.retrofit2:adapter-scala:$retrofit_version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    api "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    api "com.squareup.retrofit2:converter-protobuf:$retrofit_version"
+    //Gosn解析
+    api "com.google.code.gson:gson:$gson_version"
+    api 'androidx.multidex:multidex:2.0.1'
+    //图片加载
+    api "com.github.bumptech.glide:glide:$glide_verison"
+    //依赖注入
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    api 'com.trello.rxlifecycle3:rxlifecycle-components:3.0.0'
+    api 'com.trello.rxlifecycle3:rxlifecycle-kotlin:3.0.0'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
 }
 repositories {
     mavenCentral()
 }
 
-//kotlin {
-//    experimental {
-//        coroutines "enable"
-//    }
-//}
